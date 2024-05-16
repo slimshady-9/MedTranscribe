@@ -1,0 +1,26 @@
+<div *ngFor="let data of dataSource">
+    <ng-container class="custom-card" *ngIf="data.position === position">
+    <div>
+      <div class="card card-sm h-100">
+        <div class="card-body">
+          <h2>Patient Details</h2>
+          <hr>
+        <ul>
+            <li>Patient ID: 1</li>
+            <li>Name: Che</li>
+            <li>Age: 18</li>
+            <li>Gender: Male</li>
+            <li>Weight: 171.55</li>
+            <li>Date: {{data.date}}</li>
+            <li>Symptoms: {{data.Symptoms}}</li>
+            <li>Disease: {{data.Disease}}</li>
+            <li>Tests: {{data.Tests}}</li>
+            <li>Prescription: {{data.Prescription}}</li>
+        </ul>
+        <!-- <button mat-raised-button style="margin-left: auto; margin-bottom: 5px; margin-right: 10px;" color="primary" (click)="onDownload()">Download</button> -->
+       </div>
+       <button mat-raised-button style="margin-left: auto; margin-bottom: 25px; margin-right: 20px;" color="primary" (click)="onDownload()">Download</button>
+      </div>
+    </div>
+</ng-container>
+</div>

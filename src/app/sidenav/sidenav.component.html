@@ -1,0 +1,66 @@
+
+<div class="nav-all" style="display: flex;justify-content: space-between;box-shadow: 0px 4px 13px #dedcdc;background-color: white;">
+
+    <div style="display: flex;padding-left: 15px;    padding-top: 8px;
+    "class="logo">
+      <!-- <span class="material-symbols-outlined">
+        ecg_heart
+      </span> -->
+      <img style="    width: 76px;
+      height: 67px;"src="../../assets/Logo_Dashboard.jpg"/>
+      <!-- <i class='fa fa-heartbeat' style='color: red'></i> -->
+      <div style="display: flex;
+      flex-direction: column;padding-top: 10px;">
+      <span style="    font-size: 15pt;
+      font-family: cursive;
+      color: blue;">WELLNESS </span>
+      <span style="color: blue;
+      font-size: 11pt;
+      font-family: cursive;">PEERS</span>
+    </div>
+    </div>
+
+    <div id="down-nav">
+
+      <li class="dropdown" (click)="navigateHome()">
+        <span class="drop-text" type="button" >
+            Home
+        </span>
+      </li>
+
+        <li class="dropdown" (click)="navigateDashboard()">
+            <span class="drop-text" type="button" >
+              Dashboard
+            </span>
+        </li>
+
+
+        <li class="dropdown" (click)="navigatePatients()">
+            <span class="drop-text" type="button">
+                Patients
+            </span>
+        </li>
+
+        <li *ngIf="!loginFlag" class="dropdown" (click)="navigateLogin()">
+          <span class="drop-text" type="button">
+              Sign In
+          </span>
+        </li>
+
+        <li class="dropdown" *ngIf="loginFlag">
+          <span class="dropdown-toggle" type="button" id="dropdownLandingHover" data-bs-toggle="dropdown" aria-expanded="false" >
+            Hello, Admin
+          </span>
+          <div class="dropdown-menu" aria-labelledby="dropdownLandingHover">
+          <li>
+            <a class="dropdown-item d-flex" style="cursor: pointer;" (click)="onLogoutClick()">
+              Logout
+            </a>
+          </li>
+          </div>
+        </li>
+
+    <!-- <a class="btn btn-primary btn-transition">Logout</a> -->
+
+    </div>
+  </div>
